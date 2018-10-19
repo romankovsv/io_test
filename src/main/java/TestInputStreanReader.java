@@ -20,8 +20,22 @@ public class TestInputStreanReader {
         }
     }
 
+    public void writeToFile(){
+        File file = new File(System.getProperty("user.dir")+"/files/file3.txt");
+        try(Writer writer = new OutputStreamWriter(new FileOutputStream(file), "UTF-8")){
+            writer.write("Hello world!");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         TestInputStreanReader testInputStreanReader = new TestInputStreanReader();
+        testInputStreanReader.writeToFile();
         testInputStreanReader.readFile();
         System.out.println( testInputStreanReader.s);
     }
