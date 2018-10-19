@@ -36,7 +36,7 @@ public class CopyFileTutorial {
     public static void main(String[] args) throws IOException {
         final String currentDir = System.getProperty("user.dir");
         CopyFileTutorial copy = new CopyFileTutorial();
-        copy.copy(currentDir+"\\files\\file2.txt",currentDir+"\\files\\file3.txt" );
+        copy.copy(currentDir+"/files/file2.txt",currentDir+"/files/file3.txt" );
 
 
 
