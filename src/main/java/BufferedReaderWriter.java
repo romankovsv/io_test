@@ -8,6 +8,21 @@ public class BufferedReaderWriter {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
+        readFromConsole();
+    }
+
+    private static void readFromConsole(){
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("file5.txt"))){
+            String text;
+            while (!(text=br.readLine()).equals("ESC")){
+                bufferedWriter.write(text + "\n");
+                bufferedWriter.flush();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static  void testBufferedReaderReadCharByLine(FileReader fileReader){
