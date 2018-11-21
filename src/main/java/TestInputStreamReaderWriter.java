@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class TestInputStreanReader {
+public class TestInputStreamReaderWriter {
 
     String s;
     StringBuilder stringBuilder = new StringBuilder();
@@ -34,7 +34,7 @@ public class TestInputStreanReader {
     }
 
     public static void main(String[] args) {
-        TestInputStreanReader testInputStreanReader = new TestInputStreanReader();
+        TestInputStreamReaderWriter testInputStreanReader = new TestInputStreamReaderWriter();
         testInputStreanReader.writeToFile();
         testInputStreanReader.readFile();
         System.out.println( testInputStreanReader.s);
